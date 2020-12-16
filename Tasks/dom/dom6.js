@@ -23,4 +23,4 @@ document.body.querySelector("table").append(newRows);
 
 //   table.tBodies[0].append(...sortedRows); // (3)
 
-
+//
