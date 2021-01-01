@@ -1,0 +1,41 @@
+tbody {
+    display: grjid;
+}
+
+th, td {
+    width: 100px;
+    height: 100px;
+    
+  position: relative;
+  padding: 0;
+}
+
+textarea {
+    border: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+  
+    /* remove resizing handle in Firefox */
+    resize: none;
+  
+    /* remove outline on focus in Chrome */
+    outline: none;
+  
+    /* remove scrollbar in IE */
+    overflow: auto;
+}
+
+
+#mouse {
+    display: inline-block;
+    margin: 0;
+    cursor: pointer;
+  }
+  #mouse:active { 
+      outline: 1px dashed green;
+ }
+
+  #mouse:focus {
+    outline: 1px dashed black;
+  }
