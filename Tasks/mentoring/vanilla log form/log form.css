@@ -1,0 +1,113 @@
+:root {
+    --font: rgb(54, 54, 54);
+    --border: rgb(229, 229, 229);
+    --light-blue:  rgb(75, 160, 240);
+    --grey: rgb(163, 162, 162);
+    --light-grey: rgb(248, 248, 248);
+    --red: rgb(238, 62, 50);
+}
+
+::placeholder {
+    color: rgb(141, 141, 141);
+}
+body {
+    background-color: var(--light-grey);
+    text-align: center;
+    padding: 20px 0;
+    font-family: 'Noto Sans', sans-serif;
+}
+.form-container {
+    width: 350px;
+    height: 550px;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    box-shadow: 0px 0px 5px 0.01px rgb(207, 205, 205);
+    background-color: white;
+    text-align: center;
+    margin: auto;
+    padding: 35px;
+}
+.title {
+    font-size: 25px;
+    padding-bottom: 10px;
+}
+.input-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.label-text {
+    width: 300px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: left;
+    color: grey;
+    font-size: 16px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.input-box {
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+    border: 2px solid rgb(238, 238, 238);
+    border-radius: 4px;
+    margin-bottom: 17px;
+}
+.input-box:focus {
+    outline: none;
+    border: 2px solid var(--grey);
+}
+.input-submit {
+    width: 100%;
+    margin: 10px;
+    font-size: 16px;
+    color: white;
+    background-color: var(--light-blue);
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+}
+.input-submit:active {
+    background-color:rgb(41, 116, 201);
+    transition: all 1s;
+}
+.success {
+    border: 2px solid rgb(53, 199, 53);    
+}
+.danger, .danger2 {
+    border: 2px solid var(--red);
+}
+.success:focus {
+    border: 2px solid rgb(53, 199, 53);    
+}
+.danger:focus, .danger2:focus {
+    border: 2px solid var(--red);
+}
+.danger.input-username + span:after, 
+.danger.input-email + span:after, 
+.danger.input-username + span:after, 
+.danger.input-password + span:after, 
+.danger.input-confirm-password + span:after, 
+.danger2.input-confirm-password + span:after {
+    color: var(--red);
+    font-size: small;
+    position: relative;
+    left: 10px;
+    top: -17px;
+}
+.danger.input-username + span:after {
+    content: "Username must be at least 3 characters";
+}
+.danger.input-email + span:after {
+    content: "Email is not valid";
+}
+.danger.input-password + span:after {
+    content: "Password must be at least 6 characters";
+}
+.danger.input-confirm-password + span:after {
+    content: "Passwords do not match";
+}
+.danger2.input-confirm-password + span:after {
+    content: "Password2 is required";
+}
